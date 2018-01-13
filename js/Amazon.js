@@ -36,11 +36,11 @@ function dataretrieve() {
             var obj = jsondata.allProducts;
             var mhtml = '<div class = "col-sm-12">';
             for (i = 0; i < obj.length; i++) {
-                mhtml += '<div class = "col-sm-4" id = "imgmain"><img id = "i1" src = ' + obj[i].image_path + ' /><h6>' + obj[i].product_name + '</h6></div>';
+                mhtml += '<div class = "col-sm-4" id = "imgmain"><img id = "i1" src = ' + obj[i].image_pathindex + ' /><h6>' + obj[i].product_name + '</h6></div>';
             }
             mhtml += '</div>';
         }
-        console.log(mhtml);
+        //console.log(mhtml);
         document.getElementById("d1").innerHTML = mhtml;
     }
     displaycart();
@@ -50,11 +50,22 @@ function filters() {
     var option = document.getElementById("s1");
     var selectedval = option.value;
     if (selectedval == "Women") {
-        window.location.href = "/Pages/women.html";
+        window.location.href = "pages/women.html";
     } else if (selectedval == "All") {
-        window.location.href = "/index.html";
+        window.location.href = "index.html";
     } else if (selectedval == "Men") {
-        window.location.href = "/Pages/men.html";
+        window.location.href = "pages/men.html";
+    }
+}
+function filter() {
+    var option = document.getElementById("s1");
+    var selectedval = option.value;
+    if (selectedval == "Women") {
+        window.location.href = "../pages/women.html";
+    } else if (selectedval == "All") {
+        window.location.href = "../index.html";
+    } else if (selectedval == "Men") {
+        window.location.href = "../pages/men.html";
     }
 }
 /*Women html page Script*/
@@ -65,7 +76,7 @@ function womendata() {
     var selectedval = option.value;
     console.log(selectedval);
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -104,7 +115,7 @@ var more = document.getElementById("more");
 function womenfilter() {
 
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -132,7 +143,7 @@ function womenfilter() {
 function clothingbrands() {
 
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -162,7 +173,7 @@ function price() {
     option.value = "Women";
     var selectedval = option.value;
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -205,7 +216,7 @@ function mendata() {
     var selectedval = option.value;
     console.log(selectedval);
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -240,7 +251,7 @@ var more1 = document.getElementById("more1");
 
 function menfilter() {
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -267,7 +278,7 @@ function menfilter() {
 
 function menclothingbrand() {
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -300,7 +311,7 @@ function menprice() {
     option.value = "Men";
     var selectedval = option.value;
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -339,14 +350,14 @@ function menprice() {
 function findindex(index) {
     var index1 = index;
     localStorage.setItem("id", index1);
-    window.location.href = "/Pages/buy.html";
+    window.location.href = "../pages/buy.html";
 }
 /*Buy button*/
 function buyproduct() {
 
     var i = localStorage.getItem("id");
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
@@ -389,7 +400,7 @@ function Addtocart(index) {
     }
     /*alert("Addtocart [array11] : " + array11);*/
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -443,7 +454,7 @@ function additem() {
     if (a == 0) {
         alert("Please Select Product");
     } else {
-        window.location.href = "/Pages/addtocart.html";
+        window.location.href = "../pages/addtocart.html";
     }
 }
 
@@ -466,13 +477,13 @@ function addtocartpage() {
         document.getElementById("cart_text").innerHTML = array11.length;
     } else if (a1 === null || a1.toString() === "" || a1.toString() === "null") {
         document.getElementById("cart_text").innerHTML = 0;
-        window.location.href = "Amazon.html";
+        window.location.href = "../index.html";
     } else {
         array11 = a1.toString();
         document.getElementById("cart_text").innerHTML = 1;
     }
     var xhttp = new XMLHttpRequest;
-    xhttp.open("GET", "/data.json", true);
+    xhttp.open("GET", "../data.json", true);
     xhttp.send();
     xhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -493,7 +504,7 @@ function addtocartpage() {
 }
 
 function checkoutredirect() {
-    window.location.href = "/Pages/checkout.html";
+    window.location.href = "../pages/checkout.html";
     checkout();
 }
 
@@ -532,7 +543,7 @@ function checkout() {
                                             if (validDigits(varCVV, "CVV", "")) {
                                                 localStorage.setItem("Fname", firstname.value);
                                                 localStorage.setItem("Lname", lastname.value);
-                                                window.location.href = '/Pages/thankyou.html';
+                                                window.location.href = '../pages/thankyou.html';
                                             }
                                         }
                                     }

@@ -8,7 +8,8 @@
             "product_description": "60% Cotton, 40% Polyester,Imported,X-Temp closure,Machine Wash,Short-sleeve polo shirt featuring four-button placket",
             "shipping_details": "free",
             "price": "6.99",
-            "image_path": "/images/img1.jpg",
+            "image_path": "../images/img1.jpg",
+            "image_pathindex":"images/img1.jpg",
             "stock_availability": "Available",
             "no_of_items": "3 Left"
         },
@@ -20,7 +21,8 @@
             "product_description": "100% Polyester,Imported,Dri-FIT Technology helps keep you dry and comfortable,Straight hemline with hem vents for increased mobility",
             "shipping_details": "Free",
             "price": "20.99",
-            "image_path": "/images/img2.jpg",
+            "image_path": "../images/img2.jpg",
+            "image_pathindex":"images/img2.jpg",
             "stock_availability": "Available",
             "no_of_items": "2 Left"
         },
@@ -32,7 +34,8 @@
             "product_description": "Smooth, anti-pick, anti-pill fabric for a more comfortable, snag-free finish,Signature Moisture Transport System wicks sweat to keep you dry and light",
             "shipping_details": "Free",
             "price": "64.99",
-            "image_path": "/images/img3.jpg",
+            "image_path": "../images/img3.jpg",
+            "image_pathindex":"images/img3.jpg",
             "stock_availability": "Available",
             "no_of_items": "1 left"
         },
@@ -44,7 +47,8 @@
             "product_description": "60% Cotton, 40% Polyester,Imported,Short-sleeve polo shirt featuring four-button placket",
             "shipping_details": "Free",
             "price": "14.99",
-            "image_path": "/images/img4.jpg",
+            "image_path": "../images/img4.jpg",
+            "image_pathindex":"images/img4.jpg",
             "stock_availability": "Available",
             "no_of_items": "5 Left"
         },
@@ -56,7 +60,8 @@
             "product_description": "Smooth, anti-pick, anti-pill fabric for a more comfortable, snag-free finish,Signature Moisture Transport System wicks sweat to keep you dry and light,Lightweight",
             "shipping_details": "Free",
             "price": "30.99",
-            "image_path": "/images/img5.jpg",
+            "image_path": "../images/img5.jpg",
+            "image_pathindex":"images/img5.jpg",
             "stock_availability": "Out of Stock",
             "no_of_items": ""
         },
@@ -68,7 +73,8 @@
             "product_description": "100% Polyester,Imported,Dry Clean Only,Long sleeve,Crew neck",
             "shipping_details": "Free shipping on $50",
             "price": "128.99",
-            "image_path": "/images/img6.jpg",
+            "image_path": "../images/img6.jpg",
+            "image_pathindex":"images/img6.jpg",
             "stock_availability": "Available",
             "no_of_items": "2 Left"
         },
@@ -80,7 +86,8 @@
             "product_description": "100% Polyester,Imported,Dry Clean Only",
             "shipping_details": "Free",
             "price": "204.99",
-            "image_path": "/images/img7.jpg",
+            "image_path": "../images/img7.jpg",
+            "image_pathindex":"images/img7.jpg",
             "stock_availability": "Out of Stock",
             "no_of_items": ""
         },
@@ -92,7 +99,8 @@
             "product_description": "100% Polyester,Imported,Button closure,Machine Wash,Relaxed fit,Two-sided brushed fleece,2 button front dual chest pockets,Washed ,for softness,Button cuffs",
             "shipping_details": "Free shipping on $50",
             "price": "25.99",
-            "image_path": "/images/img8.jpg",
+            "image_path": "../images/img8.jpg",
+            "image_pathindex":"images/img8.jpg",
             "stock_availability": "Available",
             "no_of_items": "2 Left"
         },
@@ -104,7 +112,8 @@
             "product_description": "65% Polyester, 35% Cotton,Imported,Button closure,Machine Wash,Point collar,Regular cuff,Pocket at chest",
             "shipping_details": "Free shipping on $50",
             "price": "26.99",
-            "image_path": "/images/img9.jpg",
+            "image_path": "../images/img9.jpg",
+            "image_pathindex":"images/img9.jpg",
             "stock_availability": "Available",
             "no_of_items": "2 Left"
         },
@@ -116,7 +125,8 @@
             "product_description": "65% Polyester, 35% Cotton,Imported,Button closure,Machine Wash,Point collar",
             "shipping_details": "Free",
             "price": "15.99",
-            "image_path": "/images/img10.jpg",
+            "image_path": "../images/img10.jpg",
+            "image_pathindex":"images/img10.jpg",
             "stock_availability": "Available",
             "no_of_items": "5 Left"
         },
@@ -128,7 +138,8 @@
             "product_description": "100% Polyester,Imported,Button closure,Machine Wash,Slim fit,Soil release - soil release properties help eliminate dirt and stains from fabric",
             "shipping_details": "Free",
             "price": "58.99",
-            "image_path": "/images/img11.jpg",
+            "image_path": "../images/img11.jpg",
+            "image_pathindex":"images/img11.jpg",
             "stock_availability": "Available",
             "no_of_items": "3 Left"
         },
@@ -140,7 +151,8 @@
             "product_description": "100% Cotton,Imported,Machine Wash,Twill cargo pant in relaxed fit featuring tonal-stitched back pockets and slanted hand pockets Functional cargo pockets,Button closure",
             "shipping_details": "Free",
             "price": "34.99",
-            "image_path": "/images/img12.jpg",
+            "image_path": "../images/img12.jpg",
+            "image_pathindex":"images/img12.jpg",
             "stock_availability": "Out of Stock",
             "no_of_items": ""
         }
