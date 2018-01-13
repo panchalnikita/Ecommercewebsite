@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Happiness</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="/JS/commonfunction.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- External CSS -->
+    <link rel="stylesheet" type="text/css" href="css/Amazon.css">
+</head>
+
+<body onload="displaycart(); getvalue()">
+    <div id="header1">
+        <div id="header1in">
+            <a href="#" onclick="document.getElementById('id01').style.display='block'"><!--<button onclick= style="width:auto;">Login</button>-->Login</a>
+            <div id="id01" class="modal">
+                <form class="modal-content animate">
+                    <div class="container">
+                        <label><b>Username</b></label>
+                        <input type="text" id = "user" placeholder="Enter Username"  required>
+
+                        <label><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password"  required>
+
+                        <button type="submit" class = "button" onclick="username()">Login</button>
+                        <input type="checkbox" checked="checked"> Remember me
+                    </div>
+
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button  type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot password?</span>
+                    </div>
+                </form>
+            </div>
+            <p style="color: white; float: right">Hello, <span id = "Username"></span></p>
+        </div>
+    </div>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid" id="nav">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/index.html">Happiness & Shopping</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/index.html">Home</a></li>
+                <li><a href="/Pages/addtocart.html">Orders</a></li>
+                <li><a href="#">Contact US</a></li>
+            </ul>
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <select class="dropdown-btn" id="s1" onchange="filters()">
+                    <option>-Select-</option>
+                    <option>All</option>
+                    <option>Women</option>
+                    <option>Men</option>
+                    </select>
+                    <input type="text" class="form-control" placeholder="Search" class="dropdown-btn">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <div id="cart">
+                <div id="cart_img"><span id="cart_text" onclick="additem()"></span></div>
+                <span style="color: white; font-size: 20px;"><b>Cart</b></span>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-sm-4" id = "CI">
+
+            <h4>1. Contact Information</h4>
+            <table id="table">
+                <tr>
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="firstname" required maxlength="20" placeholder="First Name"></td>
+
+                    <td><input type="text" id="lastname" required maxlength="20" placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>Contact</td>
+                </tr>
+                <tr>
+                    <td><input type="email" id="email" maxlength="20" required placeholder="Email"></td>
+
+                    <td><input type="number" id="phone" maxlength="12" required placeholder="Phone"></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="address" maxlength="100" required placeholder="Address"></td>
+
+                </tr>
+                <tr>
+                    <td>State</td>
+                    <td>Zip Code</td>
+                </tr>
+                <tr>
+                    <td><select id = "state"><option>
+                    --- Select ---
+                </option>
+                    <option>NJ</option>
+                    <option>NY</option>
+                    <option>PA</option>
+                    <option>OH</option>
+                </select></td>
+
+                    <td><input type="number" id="zipcode" maxlength="6" required placeholder="Zipcode"></td>
+                </tr>
+                <tr>
+                    <td>country</td>
+                </tr>
+                <tr>
+                    <td colspan="3"><select><option>
+                   ---- Select ----
+               </option>
+                    <option>United States</option>
+                    <option>India</option>
+                    <option>United Kingdom</option>
+                    <option>Russia</option>
+                </select></td>
+
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-sm-4" id = "PM">
+
+            <h4>2. Payment Method</h4>
+            <table id="table1">
+                <tr>
+                    <td><input type="radio" name="card" required><span><img src="/images/american.png" class = "card"></span><span><img src="/images/discover.png" class = "card"></span></td>
+                </tr>
+                <tr>
+                    <td>
+                        Card type
+                    </td>
+                </tr>
+                <tr>
+                    <td><select required>
+                    <option>Credit card</option>
+                    <option>Debit Card</option>
+                </select></td>
+                </tr>
+                <tr>
+                    <td>Card Holder's Name</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="holdername" required placeholder="Name"></td>
+                </tr>
+                <tr>
+                    <td>Card Number</td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="cardnumber" required maxlength="16" placeholder="Card Number"></td>
+                </tr>
+                <tr>
+                    <td>Expiry Date</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="text" id="txtmonth" maxlength="2" style="width: 30px" required placeholder="MM" /> /
+                        <input type="text" id="txtyear" maxlength="2" style="width: 30px" required placeholder="YY" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>CVV</td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="cvv" maxlength="3" style="width: 50px" required placeholder="CVV"></td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="col-sm-4" id = "PO">
+
+            <button id="order" onclick="checkout()">Place order</button>
+        </div>
+    </div>
+    <hr>
+    <div class="row" >
+        <div class = "col-sm-3">
+            <p class = "footer"><b>Get to Know Us</b><br>
+                <a href="#">Careers</a><br>
+                <a href="#">About Happiness & Shopping</a><br>
+                <a href="#">FAQs</a><br>
+                <a href="#">Investors</a>
+            </p>
+        </div>
+        <div class = "col-sm-3">
+             <p class = "footer"><b>Guest Support</b><br>
+                <a href="#">Track Your Order</a><br>
+                <a href="#">Shipping</a><br>
+                <a href="#">Returns</a><br>
+                <a href="#">Size Chart</a><br>
+                <a href="#">Product Care</a><br>
+                <a href="#">Account SignIn</a><br>
+                <a href="#">Create an Account</a>
+            </p>
+        </div>
+        <div class = "col-sm-3">
+             <p class = "footer"><b>Gift Cards</b><br>
+                <a href="#">Buy gift cards</a><br>
+                <a href="#">Check balance</a><br>
+                <b>Shop</b><br>
+                <a href="/Pages/women.html">Women</a><br>
+                <a href="/Pages/men.html">Men</a>
+            </p>
+        </div>
+        <div class = "col-sm-3">
+            <p class = "footer"><b>Connect with Us</b><br>
+                <a href="#"><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i> Facebook</a><br>
+                <a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i> Twitter</a><br>
+                <a href="#"><i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i> Pinterest</a><br>
+                <a href="#"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i> Youtube</a><br>
+                
+            </p>
+        </div>
+    </div>
+
+    <script src="js/Amazon.js"></script>
+</body>
+
+</html>
